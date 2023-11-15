@@ -1,0 +1,52 @@
+[
+  { 
+    "priority": 1,
+    "ruleName": "Reject",
+    "condition": "Weight exceeds 50kg",
+    "weightCondition": true,
+    "volumeCondition": false,
+    "weightConfigValue": 50,
+    "volumeConfigValue": -1.0,
+    "costValue": -1.0
+  },
+  {
+    "priority": 2,
+    "ruleName": "Heavy Parcel",
+    "condition": "Weight exceeds 10kg",
+    "weightCondition": true,
+    "volumeCondition":false,
+    "weightConfigValue": 10,
+    "volumeConfigValue": -1.0,
+    "costValue": 20.0
+  },
+  {
+    "priority": 3,
+    "ruleName": "Small Parcel",
+    "condition": "Volume is less than 1500 cm3",
+    "weightCondition": false,
+    "volumeCondition": true,
+    "weightConfigValue": -1.0,
+    "volumeConfigValue": 1500.0,
+    "costValue": 0.03
+  },
+  {
+    "priority": 4,
+    "ruleName": "Medium Parcel",
+    "condition": "Volume is less than 2500 cm3",
+    "weightCondition": false,
+    "volumeCondition": true,
+    "weightConfigValue": -1.0,
+    "volumeConfigValue": 2500.0,
+    "costValue": 0.04
+  },
+  {
+    "priority": 5,
+    "ruleName": "Large Parcel",
+    "condition": "None",
+    "weightCondition": false,
+    "volumeCondition": true,
+    "weightConfigValue": -1.0,
+    "volumeConfigValue": -1.0,
+    "costValue": 0.05
+  }
+]
