@@ -1,5 +1,7 @@
 package com.mynt.services.delivery.demo.model;
 
+import java.util.Optional;
+
 public class Cost {
     private String name; 
     private double weight; //in kilogram
@@ -7,6 +9,8 @@ public class Cost {
     private double width; //in cm
     private double length; //in cm
     private double cost; //in PHP currency
+    private Optional<String> discountCode;
+    private String status;
     
     public String getName() {
         return name;
@@ -44,5 +48,20 @@ public class Cost {
     public void setCost(double cost) {
         this.cost = cost;
     }
-   
+
+    public Optional<String> getDiscountCode() {
+        return discountCode;
+    }
+    public void setDiscountCode(Optional<String> discountCode) {
+        this.discountCode = discountCode;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
+
 }

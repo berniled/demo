@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mynt.services.delivery.demo.config.PriorityConfig;
+import com.mynt.services.delivery.demo.config.VoucherItemConfig;
 import com.mynt.services.delivery.demo.model.Cost;
 import com.mynt.services.delivery.demo.service.CostService;
 
@@ -17,10 +18,13 @@ public class CostController {
     @Autowired
     private PriorityConfig priorityConfig;
 
+    @Autowired
+    private VoucherItemConfig voucherConfig;
+
     @RequestMapping(value = "/cost", consumes="application/json",produces ="application/json", method = RequestMethod.POST)
     @ResponseBody
     public Cost cost(@RequestBody Cost costRequest) {
-                        CostService costing =new CostService(costRequest.getName(), costRequest.getWeight(), costRequest.getHeight(), costRequest.getWidth(), costRequest.getLength(), priorityConfig.getPriorityConfig());
+                        CostService costing =new CostService(costRequest.getName(), costRequest.getWeight(), costRequest.getHeight(), costRequest.getWidth(), costRequest.getLength(), costRequest.getDiscountCode(), priorityConfig.getPriorityConfig(), voucherConfig.getVoucherConfig());
                          return costing.getCost();
                         
                      }

@@ -1,0 +1,8 @@
+
+    { 
+      "voucherCode": "",
+      "discount": 0.0,
+      "expirDate": "2023-12-31T00:00:00.000",
+      "apiKey": "test",
+      "path": "http://localhost:8080/voucher/"
+    }
